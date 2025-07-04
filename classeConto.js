@@ -15,10 +15,23 @@ function ContoBancario (numeroconto, intestatario, saldo){
     }
     //deposita
     this.depositaValore = function(){
+          
+        let valore = parseInt(prompt('Quanto vuoi inserire'));
+        while (valore <= 0){
+            console.log('Per favore inserisci un valore positivo.');
+            valore = parseInt(prompt('Quanto vuoi inserire'));
+            
+        }   saldo = valore + saldo;
+            console.log(`il tuo nuovo saldo è ${saldo}`)      
+        }
+        
+        /**CODICE VECCHIO
+         this.depositaValore = function(){
         let valore = parseInt(prompt('Quanto vuoi inserire'));
         saldo = valore + saldo;
         console.log(`il tuo nuovo saldo è ${saldo}`)
         }
+         */
 
     //preleva
     this.prelevaValore = function(){
