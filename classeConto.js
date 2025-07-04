@@ -10,7 +10,7 @@ function ContoBancario (numeroconto, intestatario, saldo){
 
 
     // Saluto 
-    this.visualizzaSaldo = function(saldo){
+    this.visualizzaSaldo = function(){
         console.log(`Ciao!, ${this.intestatario}, il tuo nuovo saldo è: ${this.saldo}`);
     }
     //deposita
