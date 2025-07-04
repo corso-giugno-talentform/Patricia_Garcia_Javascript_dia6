@@ -8,14 +8,19 @@ function ContoBancario (numeroconto, intestatario, saldo){
     this.interessi = 1/100;
     this.annoInteressi = 1;
 
+
+    // Saluto 
     this.visualizzaSaldo = function(saldo){
-        console.log(`il tuo nuovo saldo è: ${this.saldo}`);
+        console.log(`Ciao!, ${this.intestatario}, il tuo nuovo saldo è: ${this.saldo}`);
     }
+    //deposita
     this.depositaValore = function(){
         let valore = parseInt(prompt('Quanto vuoi inserire'));
         saldo = valore + saldo;
         console.log(`il tuo nuovo saldo è ${saldo}`)
         }
+
+    //preleva
     this.prelevaValore = function(){
         let valore = parseInt(prompt('Quanto vuoi retirare'));
         if(this.saldo > valore){
@@ -24,6 +29,7 @@ function ContoBancario (numeroconto, intestatario, saldo){
                 console.log(`il tuo nuovo saldo è ${saldo}`);
         } else {
             console.log("il tuo saldo è inferiore");
+            console.log(`il tuo nuovo saldo è ${this.saldo}`);
         }
         }
 
