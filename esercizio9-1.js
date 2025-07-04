@@ -3,6 +3,7 @@ let Book1 = {
     autore: 'F. Scott Fitzgerald',
     pagine: 180,
     letto: true,
+    tempolettura: 2,
 
     mostrareInfoLibro: function(){
         console.log(`Il tuo libro è: ${Book1.titolo}, l'autore ${Book1.autore}, il numero di pagine ${Book1.pagine}`);
@@ -17,7 +18,7 @@ let Book1 = {
     },
 
     calculaTempo: function () {
-        let calculaTempo = this.pagine * 2
+        let calculaTempo = this.pagine * this.tempolettura;
         console.log(`per leggere ${Book1.titolo}, con ${Book1.pagine} impieghi ${calculaTempo} minuti`);
     }
 };
@@ -25,3 +26,4 @@ let Book1 = {
 Book1.calculaTempo();
 Book1.statoLibro();
 Book1.mostrareInfoLibro();
+

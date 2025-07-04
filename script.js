@@ -16,7 +16,7 @@ stampaEta: function () { //getter  //metodo associato alla clase studenti
 let studenti1 = {
     firstname:'francesco',
     lastname: 'mansi',
-    age: 0,
+    age: 2,
 };
 let studenti2 = {
     firstname:'francesco',
@@ -27,7 +27,7 @@ let studenti2 = {
 let students = [studenti,studenti1,studenti2]; //array di oggetti
 
 students.forEach(function(singolo){
-   // console.log(this.firstname);
-    //console.log(singolo.age)
-   singolo.stampaEta();
+   console.log(singolo.firstname);
+console.log(singolo.age)
+  singolo.stampaEta();
 })
