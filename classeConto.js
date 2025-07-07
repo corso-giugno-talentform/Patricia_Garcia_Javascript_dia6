@@ -22,7 +22,8 @@ function ContoBancario (numeroconto, intestatario, saldo){
             valore = parseInt(prompt('Quanto vuoi inserire'));
             
         }   saldo = valore + saldo;
-            console.log(`il tuo nuovo saldo è ${saldo}`)      
+            console.log(`il tuo nuovo saldo è ${saldo}`)   
+            this.saldo = saldo;   
         }
         
         /**CODICE VECCHIO
@@ -54,7 +55,7 @@ function ContoBancario (numeroconto, intestatario, saldo){
 
 }
 
-
+//CODICE PROGRAMMA
 let conto1 = new ContoBancario ( 123456789, 'Mario Rossi', 1500);
 let conto2 = new ContoBancario ( 987654321, 'Laura Bianchi', 2350);
 let conto3 = new ContoBancario ( 456789123, 'Mario Rossi', 875.00);
@@ -64,4 +65,4 @@ conto2.visualizzaSaldo();
 conto2.depositaValore();
 conto2.prelevaValore();
 conto2.calcolaInteressi();
-
+console.log(conto2.saldo);
